@@ -73,11 +73,12 @@ conda install -c conda-forge pint\
 > pint.test()
 
 - CoolProp \
------Coolprop (General install)----- \
+-----1.Coolprop (General install)----- \
 pip install cmake\
 pip install Cython\
 pip install CoolProp\
------Coolprop (Anaconda)-----\
+
+-----2.Coolprop (Anaconda install)-----\
 conda install pip six\
 pip install cmake\
 pip install -i https://pypi.anaconda.org/coolprop/simple coolprop\
