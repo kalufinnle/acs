@@ -27,8 +27,8 @@ This makes it easier to trace code changes. You can find issue number here: http
 4. For literature management and collaboration:
      `Mendeley`
      
-5. Model dependency:
-    `Real_gas_model`
+5. In-house function dependency:
+    `real_gas_model`
     
     
 ## **Coding style**
