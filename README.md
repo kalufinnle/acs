@@ -1,4 +1,4 @@
-# Attitude_control_system
+# attitude_control_system
 Description:
 Attitude Control and Reaction Control System
 
