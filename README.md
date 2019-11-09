@@ -64,7 +64,7 @@ To create an environment, type: `conda create --name <environmentName>`
 
 
 ## **E. Package and library dependencies before runing the scripts:**
-- **Pint \
+- **Pint** \
 -----Pint (General install)-----\
 `pip install pint`\
 -----Pint (Anaconda)-----\
@@ -72,7 +72,7 @@ To create an environment, type: `conda create --name <environmentName>`
 > You can check the installation with the following command:\
 > pint.test()
 
-- CoolProp \
+- **CoolProp** \
 -----1.Coolprop (General install)----- \
 `pip install cmake`\
 `pip install Cython`\
@@ -89,7 +89,7 @@ OR\
 `conda install -c conda-forge/label/gcc7 coolprop` \
 `conda install -c conda-forge/label/cf201901 coolprop`
 
-- SUAVE \
+- **SUAVE** \
 `git clone https://github.com/suavecode/SUAVE.git` \
 `cd SUAVE/trunk` \
 `python setup.py install`
