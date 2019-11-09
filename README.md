@@ -16,7 +16,7 @@ run the following: `pip install -r requirements.txt`
 -  Please write down detailed description/messages when you commit; style: "issue_number-description-purpose-file(s)_name_you_commited". 
 This makes it easier to trace code changes. You can find issue number here: https://github.com/kalufinnle/acs/issues
 
-- Please remember to git pull every time before you start to edit any .py
+- Please remember to `git pull` every time before you start to edit any .py
 
 2. For high level view of variable location and code structure:
     `SUAVE 2.0` `UML`
