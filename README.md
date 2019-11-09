@@ -6,9 +6,16 @@ Attitude Control and Reaction Control System
 If you need to check path
 run `get_path.py` \
 If you want to install
-run the following: `pip install -r requirements.txt`
+run the following: `pip -m install -r requirements.txt`
 
 ## **B. Guideline:**
+ 0.  DO NOT
+- Please NEVER use `` :
+`pip install` gives you a permission error, it likely means you're trying to install/update packages in a system python, such as /usr/bin/python. Doing this can have bad consequences, as often the operating system itself depends on particular versions of packages within that Python installation. For day-to-day Python usage, you should isolate your packages from the system Python, using either virtual environments or Anaconda(conda) — I personally prefer conda for this. \
+If you are using python IDE or command lines use `python -m pip install <package>` rather than `$ pip install <package>`because the former is more explicit about where the package will be installed. \
+If you are using Juypter kernel, use `import sys
+!{sys.executable} -m pip install numpy` rather than `!pip install numpy` That bit of extra boiler-plate makes certain that you are running the pip version associated with the current Python kernel, so that the installed packages can be used in the current notebook. This is related to the fact that, even setting Jupyter notebooks aside, it's better to install packages using
+
 
  1. For code version control:
 -  Please use python 3's virtual environment in order to be consistent on packages version control
