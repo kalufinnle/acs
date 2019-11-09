@@ -77,7 +77,6 @@ To create an environment, type: `conda create --name <environmentName>`
 `pip install cmake`\
 `pip install Cython`\
 `pip install CoolProp`\
-
 -----Coolprop (Anaconda install)-----\
 `conda install pip six`\
 `pip install cmake`\
