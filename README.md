@@ -1,4 +1,5 @@
 # Attitude Control System
+Description:
 Attitude_Control_Reaction_Control_System
 
 ## **Installation**
@@ -7,7 +8,7 @@ run `get_path.py`
 If you want to install
 run the following: `pip install -r requirements.txt`
 
-**Guideline:**
+## **Guideline:**
 
  1. For code version control:
 -  Please use python 3's virtual environment in order to be consistent on packages version control
@@ -62,8 +63,7 @@ https://www.gitkraken.com/invite/gN1gNQGw
 
 
 
-
-## **Package/Library Installation**
+## **Package and library Dependency**
 - Pint \
 -----Pint (General install)-----\
 pip install pint\
