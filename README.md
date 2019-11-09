@@ -13,7 +13,7 @@ run the following: `pip install -r requirements.txt`
  1. For code version control:
 -  Please use python 3's virtual environment in order to be consistent on packages version control
 
--  Please write down detailed description/messages when you commit; style: "issue_number-description-purpose-file(s)_name_you_commited". 
+-  Please write down detailed description/messages when you commit; style: `"issue_number-description-purpose-file(s)_name_you_commited"`.  \
 This makes it easier to trace code changes. You can find issue number here: https://github.com/kalufinnle/acs/issues
 
 - Please remember to `git pull` every time before you start to edit any .py
