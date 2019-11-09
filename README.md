@@ -2,7 +2,7 @@
 Description:
 Attitude_Control_Reaction_Control_System
 
-## **Installation: **
+## **Installation:**
 If you need to check path
 run `get_path.py` \
 If you want to install
