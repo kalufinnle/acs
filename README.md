@@ -73,12 +73,12 @@ To create an environment, type: `conda create --name <environmentName>`
 > pint.test()
 
 - **CoolProp** \
------1.Coolprop (General install)----- \
+-----Coolprop (General install)----- \
 `pip install cmake`\
 `pip install Cython`\
 `pip install CoolProp`\
 
------2.Coolprop (Anaconda install)-----\
+-----Coolprop (Anaconda install)-----\
 `conda install pip six`\
 `pip install cmake`\
 `pip install -i https://pypi.anaconda.org/coolprop/simple coolprop`\
