@@ -2,7 +2,7 @@
 Description:
 Attitude_Control_Reaction_Control_System
 
-## **Installation**
+## **Installation: **
 If you need to check path
 run `get_path.py` \
 If you want to install
@@ -31,7 +31,7 @@ This makes it easier to trace code changes. You can find issue number here: http
     `real_gas_model`
     
     
-## **Coding style**
+## **Coding style:**
 http://suave.stanford.edu/documentation/code_style.html
 ### **Naming Convention**
 #### In terms of typography:
@@ -48,7 +48,7 @@ http://suave.stanford.edu/documentation/code_style.html
 - Write out field name verbosely, but try to keep short
 
 
-## **Anaconda**
+## **Anaconda:**
 To list all discoverable environments, type: `conda info --envs`.
 
 To activate enviroment, type: `conda activate <environmentName>`
@@ -58,12 +58,12 @@ To deactivate an environment, type: `conda deactivate`
 To create an environment, type: `conda create --name <environmentName>`
 
 
-### **GitKraken signup below!**
+## **GitKraken signup below!**
 https://www.gitkraken.com/invite/gN1gNQGw
 
 
 
-## **Package and library Dependency**
+## **Package and library Dependency:**
 - Pint \
 -----Pint (General install)-----\
 pip install pint\
