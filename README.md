@@ -64,7 +64,7 @@ To create an environment, type: `conda create --name <environmentName>`
 
 
 ## **E. Package and library dependencies before runing the scripts:**
-- Pint \
+- **Pint \
 -----Pint (General install)-----\
 `pip install pint`\
 -----Pint (Anaconda)-----\
