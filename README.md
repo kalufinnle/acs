@@ -4,7 +4,7 @@ Attitude_Control_Reaction_Control_System
 
 ## **Installation**
 If you need to check path
-run `get_path.py`
+run `get_path.py` \
 If you want to install
 run the following: `pip install -r requirements.txt`
 
