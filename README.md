@@ -2,13 +2,13 @@
 Description:
 Attitude_Control_Reaction_Control_System
 
-## **Installation:**
+## **A. Installation:**
 If you need to check path
 run `get_path.py` \
 If you want to install
 run the following: `pip install -r requirements.txt`
 
-## **Guideline:**
+## **B. Guideline:**
 
  1. For code version control:
 -  Please use python 3's virtual environment in order to be consistent on packages version control
@@ -31,7 +31,7 @@ This makes it easier to trace code changes. You can find issue number here: http
     `real_gas_model`
     
     
-## **Coding style:**
+## **C. Coding style:**
 http://suave.stanford.edu/documentation/code_style.html
 ### **Naming Convention**
 #### In terms of typography:
@@ -48,7 +48,7 @@ http://suave.stanford.edu/documentation/code_style.html
 - Write out field name verbosely, but try to keep short
 
 
-## **Anaconda:**
+## **D. Anaconda:**
 To list all discoverable environments, type: `conda info --envs`.
 
 To activate enviroment, type: `conda activate <environmentName>`
@@ -63,7 +63,7 @@ https://www.gitkraken.com/invite/gN1gNQGw
 
 
 
-## **Package and library dependencies before runing the scripts:**
+## **E. Package and library dependencies before runing the scripts:**
 - Pint \
 -----Pint (General install)-----\
 `pip install pint`\
