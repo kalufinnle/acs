@@ -1,6 +1,6 @@
-# Attitude Control System
+# Attitude_control_system
 Description:
-Attitude_Control_Reaction_Control_System
+Attitude Control and Reaction Control System
 
 ## **A. Installation:**
 If you need to check path
