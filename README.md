@@ -29,7 +29,9 @@ This makes it easier to trace code changes. You can find issue number here: http
      
 5. In-house function dependency:
     `real_gas_model`
-    
+
+### **GitKraken signup below!**
+https://www.gitkraken.com/invite/gN1gNQGw
     
 ## **C. Coding style:**
 http://suave.stanford.edu/documentation/code_style.html
@@ -58,8 +60,6 @@ To deactivate an environment, type: `conda deactivate`
 To create an environment, type: `conda create --name <environmentName>`
 
 
-## **GitKraken signup below!**
-https://www.gitkraken.com/invite/gN1gNQGw
 
 
 
