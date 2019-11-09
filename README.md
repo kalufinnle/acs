@@ -9,7 +9,7 @@ If you want to install
 run the following: `pip -m install -r requirements.txt`
 
 ## **B. Guideline:**
- 0.  DO NOT
+ **B0.  DO NOT:**
 - Please NEVER use `sudo pip install` \
 `pip install` gives you a permission error, it likely means you're trying to install/update packages in a system python, such as /usr/bin/python. Doing this can have bad consequences, as often the operating system itself depends on particular versions of packages within that Python installation. For day-to-day Python usage, you should isolate your packages from the system Python, using either virtual environments or Anaconda(conda) — I personally prefer conda for this. 
 - If you are using python IDE or command lines \
@@ -19,7 +19,7 @@ use `import sys
 !{sys.executable} -m pip install numpy` rather than `!pip install numpy` That bit of extra boiler-plate makes certain that you are running the pip version associated with the current Python kernel, so that the installed packages can be used in the current notebook. This is related to the fact that, even setting Jupyter notebooks aside, it's better to install packages using
 
 
- 1. For code version control:
+ **B1. For code version control:**
 -  Please use python 3's virtual environment in order to be consistent on packages version control
 
 -  Please write down detailed description/messages when you commit; style: `"issue_number-description-purpose-file(s)_name_you_commited"`.  \
@@ -27,16 +27,16 @@ This makes it easier to trace code changes. You can find issue number here: http
 
 - Please remember to `git pull` every time before you start to edit any .py
 
-2. For high level view of variable location and code structure:
+**B2. For high level view of variable location and code structure:**
     `SUAVE 2.0` `UML`
 
-3. For code management:
+**B3. For code management:**
     `Gitkraken` `Glo Board` `Atom`
 
-4. For literature management and collaboration:
+**B4. For literature management and collaboration:**
      `Mendeley`
      
-5. In-house function dependency:
+**B5. In-house function dependency:**
     `real_gas_model`
 
 ### **GitKraken signup below!**
