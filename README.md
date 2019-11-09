@@ -63,7 +63,7 @@ https://www.gitkraken.com/invite/gN1gNQGw
 
 
 
-## **Package and library Dependency:**
+## **Package and library dependencies before runing the scripts:**
 - Pint \
 -----Pint (General install)-----\
 pip install pint\
