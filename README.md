@@ -87,7 +87,7 @@ OR\
 `conda install -c conda-forge coolprop` \
 `pip install cmake`\
 `conda install -c conda-forge/label/gcc7 coolprop` \
-`conda install -c conda-forge/label/cf201901 coolprop``
+`conda install -c conda-forge/label/cf201901 coolprop`
 
 - SUAVE \
 `git clone https://github.com/suavecode/SUAVE.git` \
