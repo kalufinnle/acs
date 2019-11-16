@@ -2,8 +2,8 @@
 Description:
 Attitude Control and Reaction Control System
 
-$ project_strcture
-.
+$ project_strcture \
+.\
 ├── README.md   \
 ├── LICENSE.txt  \
 ├── requirements.txt  \
