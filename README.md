@@ -9,7 +9,7 @@ $ project_strcture \
 ## **A. Installation:**
 If you need to check path
 run `get_path.py` \
-If you want to install
+If you want to pip install all at once
 run the following: `pip -m install -r requirements.txt` \
 Make file executable: `chmod +x file_name.py` (if using cluster or supercomputer input: `#!/usr/bin/env python` rathan than `#!/usr/bin/python`)
 
