@@ -10,8 +10,8 @@ $ project_strcture \
 If you need to check path
 run `get_path.py` \
 If you want to install
-run the following: `pip -m install -r requirements.txt`
-Make file executable: `chmod +x file_name.py` if using cluster or supercomputer put: `#!/usr/bin/env python` rathan than `#!/usr/bin/python`
+run the following: `pip -m install -r requirements.txt` \
+Make file executable: `chmod +x file_name.py` if using cluster or supercomputer input: `#!/usr/bin/env python` rathan than `#!/usr/bin/python`
 
 ## **B. Guideline:**
  **B0.  DO NOT:**
