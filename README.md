@@ -39,7 +39,7 @@ use `import sys
 
 
  **B1. For code version control:**
--  Please use python 3's virtual environment in order to be consistent on packages version control
+-  Please use python 3's virtual environment in order to be consistent on packages version control `yml file under .\workload`
 
 -  Please write down detailed description/messages when you commit; style: `"issue_number-description-purpose-file(s)_name_you_commited"`.  \
 This makes it easier to trace code changes. You can find issue number here: https://github.com/kalufinnle/acs/issues
