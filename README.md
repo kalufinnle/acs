@@ -2,6 +2,25 @@
 Description:
 Attitude Control and Reaction Control System
 
+$ project_strcture
+.
+├── README.md
+├── LICENSE.txt
+├── requirements.txt
+├── setup.py
+├── bin
+|   └── myapp.py
+├── docs
+|   ├── _build
+|   ├── conf.py
+|   ├── index.rst
+|   └── Makefile
+├── fixtures
+├── foo
+|   └── __init__.py
+└── tests
+    └── __init__.py
+
 ## **A. Installation:**
 If you need to check path
 run `get_path.py` \
