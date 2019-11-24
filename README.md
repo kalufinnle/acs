@@ -4,7 +4,7 @@ Attitude Control and Reaction Control System
 
 $ project_strcture \
 .\
-`run output_files_structure.py`
+`python output_files_structure.py`
 
 ## **A. Installation:**
 If you need to check path
