@@ -11,12 +11,7 @@ Condition:  <Isentropic nozzle flow>
 Assumption: <Upstream pressure decreases as a result of not using regulators>
 """
 
-"""                
-                inputs["test_date"] = int(input ("""Input Test Date (e.g.201911) : """))
-                inputs["test_title"] = input ("""Input Test Title: """)
-                inputs["test_description"] = input ("""Input Test Description: """)
-                inputs["a_e"] = float(input ("""Input a Exit Area of a Nozzle in numbers : """))
-""""
+
 
 class test_campaign:
     # class var shared by all instances
@@ -48,7 +43,8 @@ class test_campaign:
                 input("""Input Test Title: """),
                 input("""Input Test Description: """),
                 float(input ("""Input a Exit Area of a Nozzle in numbers : """)),
-                0000000000-add
+                float(input ("""Input a Choked Area of a Nozzle in numbers : """))
+                #0000000000-add
         )
 
         
@@ -56,7 +52,8 @@ class test_campaign:
         """Return a neatly formatted descriptive name."""
         long_name = '\r\n |Test Date:  ' + str(self.date) + '\r\n |Test Title: ' + \
                     self.title + '\r\n |Test Description: ' +  \
-                    self.doc + '\r\n |Exit Aera of the nozzle: ' + str(self.a_e) 0000000000-add
+                    self.doc + '\r\n |Exit Aera of the nozzle: ' + str(self.a_e) + \
+                    '\r\n |Choked Aera of the nozzle: ' + str(self.a_c)#0000000000-add
         print(long_name)
     
     def print_keys_values(self):
@@ -76,10 +73,10 @@ if __name__ == '__main__':
 
 test1 =test_campaign.input_param()
 
-if:
-test1.print_keys_values()
-else:
-test1.get_descriptive_name()
+try:
+    test1.print_keys_values()
+except:
+    test1.get_descriptive_name()
 
 
 
