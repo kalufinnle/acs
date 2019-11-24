@@ -96,8 +96,8 @@ class DisplayablePath(object):
     
     
 if __name__ == '__main__': 
-     lib_path = input ("""Enter the directary you want to see the files structures. Example: 'C:\\Users\\kevin\\GitHub\FloWaveNet-master' ： """)
-     
+    lib_path = input ("""Enter the directary you want to see the files structures. Example: 'C:\\Users\\kevin\\GitHub\FloWaveNet-master' ： """)
+    
     paths = DisplayablePath.make_tree(Path(lib_path))
     
 for path in paths:
