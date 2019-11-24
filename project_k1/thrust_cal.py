@@ -71,12 +71,12 @@ class test_campaign:
 
 if __name__ == '__main__':
 
-test1 =test_campaign.input_param()
+    test1 =test_campaign.input_param()
 
-try:
-    test1.print_keys_values()
-except:
-    test1.get_descriptive_name()
+    try:
+        test1.print_keys_values()
+    except:
+        test1.get_descriptive_name()
 
 
 
