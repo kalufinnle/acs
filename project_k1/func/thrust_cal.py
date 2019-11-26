@@ -11,11 +11,9 @@ Condition:  <Isentropic nozzle flow>
 Assumption: <Upstream pressure decreases as a result of not using regulators>
 """
 
-
-
 class test_campaign:
     # class var shared by all instances
-    testing_main_system = 'acs'             
+    testing_system = 'acs'             
 
     def __init__(self, test_date, test_title, test_description, a_e, a_c):
         # instance var unique to each instance
@@ -33,8 +31,6 @@ class test_campaign:
             raise Exception('Exit Area should be larger than choked area. The value of a_e was: {}'.format(self.a_e))
         if self.a_e > 100*self.a_c:
             raise Exception('Exit Area should NOT exceed 100 times choked area. The value of a_e was: {}'.format(self.a_e))
-
-
 
     @classmethod
     def input_param(cls):
@@ -55,6 +51,7 @@ class test_campaign:
                     self.doc + '\r\n |Exit Aera of the nozzle: ' + str(self.a_e) + \
                     '\r\n |Choked Aera of the nozzle: ' + str(self.a_c)#0000000000-add
         print(long_name)
+        return long_name
     
     def print_keys_values(self):
         for key, value in self.inputs.items(): 
@@ -63,20 +60,12 @@ class test_campaign:
     def algorithm(*array):  #same as *args
         z = 1
         for num in array:
-        #Input algorithm for Khalil's code  eg. z*= num  main: multiply = algorithm(3, 5, 10, 6)
+        #Input algorithm from Khalil's code  eg. z*= num  main: multiply = algorithm(3, 5, 10, 6)
             num += 'exp()'
             z = num   
         print(z)
 
 
-if __name__ == '__main__':
-
-    test1 =test_campaign.input_param()
-
-    try:
-        test1.print_keys_values()
-    except:
-        test1.get_descriptive_name()
 
 
 
