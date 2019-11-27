@@ -27,20 +27,25 @@ class test_campaign:
                        "Test Description": self.doc,
                        "Exit Aera of the nozzle": self.a_e,
                        "Choked Aera of the nozzle": self.a_c}
+        
+        00000 input here about new param
+        
         if self.a_e == self.a_c:
-            raise Exception('Exit Area should be larger than choked area. The value of a_e was: {}'.format(self.a_e))
+            raise Exception('Exit Area should be larger than Choked area. The value of a_e was: {}'.format(self.a_e))
         if self.a_e > 100*self.a_c:
-            raise Exception('Exit Area should NOT exceed 100 times choked area. The value of a_e was: {}'.format(self.a_e))
+            raise Exception('Exit Area should NOT exceed 100 times of Choked area. The value of a_e was: {}'.format(self.a_e))
 
     @classmethod
     def input_param(cls):
         return cls(
-                int(input("""Input Test Date (e.g.201911) : """)),
+                int(input("""=============================
+                          \nInput Test Date (e.g.201911) : """)),
                 input("""Input Test Title: """),
                 input("""Input Test Description: """),
                 float(input ("""Input a Exit Area of a Nozzle in numbers : """)),
                 float(input ("""Input a Choked Area of a Nozzle in numbers : """))
-                #0000000000-add
+                #0000000000-add 
+                1111111111111
         )
 
         
@@ -49,10 +54,11 @@ class test_campaign:
         long_name = '\r\n |Test Date:  ' + str(self.date) + '\r\n |Test Title: ' + \
                     self.title + '\r\n |Test Description: ' +  \
                     self.doc + '\r\n |Exit Aera of the nozzle: ' + str(self.a_e) + \
-                    '\r\n |Choked Aera of the nozzle: ' + str(self.a_c)#0000000000-add
+                    '\r\n |Choked Aera of the nozzle: ' + str(self.a_c) 22222222222 #0000000000-add 
         print(long_name)
         return long_name
     
+    # redundency for get_descriptive_name()
     def print_keys_values(self):
         for key, value in self.inputs.items(): 
             print ("%s : %s" %(key, value)) 
@@ -64,6 +70,10 @@ class test_campaign:
             num += 'exp()'
             z = num   
         print(z)
+    
+    #temperature, pressure, and thrust curve vs time
+    def t_p_f_vs_t(self):
+    
 
 
 
