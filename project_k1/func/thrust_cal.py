@@ -28,7 +28,7 @@ class test_campaign:
                        "Exit Aera of the nozzle": self.a_e,
                        "Choked Aera of the nozzle": self.a_c}
         
-        00000 input here about new param
+        #00000 input here about new param
         
         if self.a_e == self.a_c:
             raise Exception('Exit Area should be larger than Choked area. The value of a_e was: {}'.format(self.a_e))
@@ -45,7 +45,7 @@ class test_campaign:
                 float(input ("""Input a Exit Area of a Nozzle in numbers : """)),
                 float(input ("""Input a Choked Area of a Nozzle in numbers : """))
                 #0000000000-add 
-                1111111111111
+               # 1111111111111
         )
 
         
@@ -54,7 +54,7 @@ class test_campaign:
         long_name = '\r\n |Test Date:  ' + str(self.date) + '\r\n |Test Title: ' + \
                     self.title + '\r\n |Test Description: ' +  \
                     self.doc + '\r\n |Exit Aera of the nozzle: ' + str(self.a_e) + \
-                    '\r\n |Choked Aera of the nozzle: ' + str(self.a_c) 22222222222 #0000000000-add 
+                    '\r\n |Choked Aera of the nozzle: ' + str(self.a_c) # 22222222222 #0000000000-add 
         print(long_name)
         return long_name
     
@@ -73,6 +73,7 @@ class test_campaign:
     
     #temperature, pressure, and thrust curve vs time
     def t_p_f_vs_t(self):
+        return
     
 
 
