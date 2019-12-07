@@ -9,6 +9,7 @@ Created on Sat Nov 19 19:55:04 2019
 Thrust calculation for nozzles where tank pressure and temperature changes as a result of using propellant 
 Condition:  <Isentropic nozzle flow>
 Assumption: <Upstream pressure decreases as a result of not using regulators>
+            <We do not consider too small nozzles, say with chamber size <10 mm and neck size <1 mm, where the effect of boundary layers become predominant>
 """
 
 class test_campaign:
