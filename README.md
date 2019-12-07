@@ -106,3 +106,8 @@ OR\
 `git clone https://github.com/suavecode/SUAVE.git` \
 `cd SUAVE/trunk` \
 `python setup.py install`
+
+
+## **F. Others:**
+- Coolprop parameters list
+http://www.coolprop.org/coolprop/HighLevelAPI.html
