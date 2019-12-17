@@ -7,7 +7,7 @@ Created on Mon Dec 16 16:51:31 2017
 Saving Machine Learning Trained Models
 """
 
-
+import pickle
 '''e.g.
     from sklearn.linear_model import LogisticRegression
     import pickle
