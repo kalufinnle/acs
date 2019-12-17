@@ -45,25 +45,25 @@ def load_sklear_mod_s(model_file_path):
 
 
   
-def save_keras_mod(model, json_file_path):
+def save_keras_mod(model, json_file_path, str_h5_file):  #str_h5_file = "model.h5"
     from keras.models import Sequential
     from keras.layers import Dense
     # serialize to JSON
-    json_file = model.to_json()
+    model_json = model.to_json()
     with open(json_file_path, "w") as file:
-        file.write(json_file)
+        file.write(model_json)
     # serialize weights to HDF5
-    model.save_weights(h5_file)
+    model.save_weights(str_h5_file)
     
-def load_keras_mod(model, json_file):
+def load_keras_mod(model, json_file_path, str_h5_file): #str_h5_file = "model.h5"
     from keras.models import model_from_json
     # load json
-    file = open(json_file, 'r')
+    file = open(json_file_path, 'r')
     model_json = file.read()
     file.close()
     loaded_model = model_from_json(model_json)
     # load weights
-    loaded_model.load_weights(h5_file)
+    loaded_model.load_weights(str_h5_file)
     return loaded_model
 
 
@@ -75,10 +75,10 @@ def load_keras_mod(model, json_file):
     model = sm.tsa.ARIMA([1,5,9,12], order=(1, 0, 1))  
     model= model.fit()
 """
-def save_stats_mod(model):
+def save_stats_mod(model, myfile):
     model.save(myfile)
 
-def load_stats_mod():    
+def load_stats_mod(my_file):    
     from statsmodels.tsa.arima_model import ARIMAResults
     loaded = ARIMAResults.load(my_file)
     return loaded
