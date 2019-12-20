@@ -32,7 +32,7 @@ import sys
 
 
 def get_path():
-    dirpath = os.getcwk()
+    dirpath = os.getcwd()
     print("Current directory is : " + dirpath)
     foldername = os.path.basename(dirpath)
     print("Current folder name is : " + foldername)
