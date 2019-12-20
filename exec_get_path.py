@@ -31,8 +31,8 @@ import matplotlib.pyplot as plt
 import sys
 
 
-def get_path():
-    dirpath = os.getcwd()
+def get_path()
+    dirpath = os.getcwdsd()
     print("Current directory is : " + dirpath)
     foldername = os.path.basename(dirpath)
     print("Current folder name is : " + foldername)
