@@ -1,4 +1,4 @@
-# attitude_control_system
+# attitude_control_system_guide
 Description:
 Attitude Control and Reaction Control System
 
@@ -10,7 +10,7 @@ $ project_strcture \
 If you need to check path
 run `get_path.py` \
 If you want to pip install all packages at once
-run the following: `pip -m install -r requirements.txt` \
+run the following: `pip -m install -r requirements.txt` (this txt will be constantly updated by Kevin)\
 Make file executable: `chmod +x file_name.py` (if using cluster or supercomputer input: `#!/usr/bin/env python` rathan than `#!/usr/bin/python`)
 
 ## **B. Guideline:**
