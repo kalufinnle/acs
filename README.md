@@ -1,4 +1,4 @@
-# attitude_control_system
+# attitude_control_system_guide
 Description:
 Attitude Control and Reaction Control System
 
@@ -10,7 +10,7 @@ $ project_strcture \
 If you need to check path
 run `get_path.py` \
 If you want to pip install all packages at once
-run the following: `pip -m install -r requirements.txt` \
+run the following: `pip -m install -r requirements.txt` (this txt will be constantly updated by Kevin)\
 Make file executable: `chmod +x file_name.py` (if using cluster or supercomputer input: `#!/usr/bin/env python` rathan than `#!/usr/bin/python`)
 
 ## **B. Guideline:**
@@ -26,7 +26,7 @@ use `import sys
 
 
  **B1. For code version control:**
--  Please use python 3's virtual environment in order to be consistent on packages version control. Feel free to use `~acs/.github/workflows/pythonpackage.yml`
+-  Please use python 3's virtual environment in order to be consistent on packages version control. Feel free to use `~acs/.github/workflows/pythonpackage.yml` 
 
 -  Please write down detailed description/messages when you commit; style: `"issue_number-description-purpose-file(s)_name_you_commited"`.  \
 This makes it easier to trace code changes. You can find issue number here: https://github.com/kalufinnle/acs/issues
@@ -43,7 +43,7 @@ This makes it easier to trace code changes. You can find issue number here: http
      `Mendeley`
      
 **B5. In-house function dependency:**
-    `real_gas_model`
+    `real_gas_model`(Pending)
 
 ### **GitKraken signup below!**
 https://www.gitkraken.com/invite/gN1gNQGw
