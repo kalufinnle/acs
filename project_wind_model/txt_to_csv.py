@@ -1,0 +1,80 @@
+import csv
+
+def read_txt(filename):
+    """
+    Read file with given filename as txt file and extract rows, strip and clean up, convert and return nested list of
+    rows and values
+
+    :param filename:
+    :return:
+    """
+    rows = []
+
+    with open(filename, 'r') as file:
+        contents = file.readlines()
+
+        for line in contents:
+
+            line = line[1:]
+            line = line[:-2]
+
+            elements = line.split(', ')
+
+            for i in range(len(elements)):
+                if elements[i] != 'None':
+                    elements[i] = elements[i][1:]
+                    elements[i] = elements[i][:-1]
+
+            rows.append(elements)
+
+    return rows
+
+
+def str_to_num(lst):
+    """
+    Convert the entries in the list that are numbers to type float (all except entries i=0,4)
+
+    :param lst:
+    :return:
+    """
+    for j in range(len(lst)):
+        for i in range(len(lst[j])):
+            if i % 12 == 0 or (i - 4) % 12 == 0:
+                pass
+            else:
+                if lst[j][i] != 'None' and lst[j][i] != '--':
+                    lst[j][i] = float(lst[j][i])
+
+    return lst
+
+
+def write_csv(lst, name='temp.csv'):
+    """
+    Write csv file from nested list
+
+    :param name:
+    :param lst:
+    :return:
+    """
+    with open(name, 'w', newline='') as csv_file:
+        writer = csv.writer(csv_file)
+
+        for row in lst:
+            writer.writerow(row)
+
+
+if __name__ == '__main__':
+    filename = 'values.txt'
+
+    print('-- Initiating process --')
+    l = read_txt(filename)
+
+    print('File read successfully')
+
+    l_int = str_to_num(l)
+
+    print("Values converted to numbers")
+
+    write_csv(l_int, 'weather.csv')
+
+    print("CSV file created")
