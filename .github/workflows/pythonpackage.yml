@@ -19,7 +19,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        # python3.6 -m pip install --upgrade pip
+        # do not run python3.6 -m pip install --upgrade pip; will disrupt cmake dependency
         pip install -r requirements.txt
     - name: Lint with flake8
       run: |
