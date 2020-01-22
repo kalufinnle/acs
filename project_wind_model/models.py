@@ -46,7 +46,7 @@ def baseline_ridge(all_X,all_y):
     
     best_para = clf_s.best_params_
     best_model = clf_s.best_estimator_
-    cv_for_hyperparatuning=clf_s.cv_results_
+    cv_for_hyperparamtuning=clf_s.cv_results_
     ts_accuracy = evaluate(best_model, X_ts, y_ts)
     #run CV 100 times to smooth out the result//since reshuffle the data sometimes boost up the accuracy a lot   
     #cv = StratifiedShuffleSplit(n_splits=10, test_size=0.2, random_state=0)
@@ -65,7 +65,7 @@ def baseline_svc(all_X,all_y):
     
     best_para = clf_s.best_params_
     best_model = clf_s.best_estimator_
-    cv_for_hyperparatuning=clf_s.cv_results_
+    cv_for_hyperparamtuning=clf_s.cv_results_
     ts_accuracy = evaluate(best_model, X_ts, y_ts)
     #run CV 100 times to smooth out the result//since reshuffle the data sometimes boost up the accuracy a lot   
     #cv = StratifiedShuffleSplit(n_splits=10, test_size=0.2, random_state=0)
