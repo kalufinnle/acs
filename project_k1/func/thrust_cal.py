@@ -14,9 +14,8 @@ Assumption: <Upstream pressure decreases as a result of not using regulators>
 
 class test_campaign:
     # class var shared by all instances
-    testing_system = 'acs'             
-
-    def __init__(self, test_date, test_title, test_description, a_e, a_c):
+    testing_system = 'acs'  
+    def __init__(self, test_date, test_title, test_description, a_e, a_c  ):
         # instance var unique to each instance
         self.date  = test_date           
         self.title = test_title        
@@ -74,6 +73,7 @@ class test_campaign:
     
     #temperature, pressure, and thrust curve vs time
     def t_p_f_vs_t(self):
+        #m_dot = 
         return
     
 
