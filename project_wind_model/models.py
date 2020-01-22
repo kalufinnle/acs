@@ -10,6 +10,8 @@ from sklearn import svm
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
 
 def load_peudo_data(n_samples, n_features):
     rng = np.random.RandomState(56)
@@ -37,7 +39,7 @@ def evaluate(model, test_features, test_labels):
 def baseline_ridge(all_X,all_y):
     n_alphas = 200
     param_rdg = {'alpha':(np.logspace(-10, -2, n_alphas)).tolist()}
-    ridge = linear_model.Ridge(fit_intercept=False)
+    ridge = Ridge(fit_intercept=False)
     clf_s = GridSearchCV(ridge, param_grid = param_rdg, cv = 5)
     X_tr, X_ts, y_tr, y_ts = train_test_split(all_X, all_y, test_size = 0.2, random_state = 12, stratify = all_y)
     clf_s.fit(X_tr, y_tr)
