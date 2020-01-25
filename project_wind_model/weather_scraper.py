@@ -22,7 +22,7 @@ class MySpider(scrapy.Spider):
 
     name = "wunder_spider"
     allowed_domains = ['wunderground.com']
-    loc = 'KCACANTI2'
+    loc = 'KNMTRUTH6'
 
     start_urls = ['https://www.wunderground.com/dashboard/pws/' + loc + '/table/2019-01-13/2019-01-13/daily']
 
@@ -34,7 +34,7 @@ class MySpider(scrapy.Spider):
         """
 
         # Base URL
-        loc = 'KCACANTI2'
+        loc = 'KNMTRUTH6'
         locator = 'https://www.wunderground.com/dashboard/pws/' + loc + '/table'
 
         for year in range(2017, 2020):
@@ -60,7 +60,7 @@ class MySpider(scrapy.Spider):
         """
 
         # Base XPath locator
-        loc = 'KCACANTI2'
+        loc = 'KNMTRUTH6'
         locator = './/body//table[@class="history-table desktop-table"]/tbody'
         row = []
 
@@ -107,10 +107,10 @@ class MySpider(scrapy.Spider):
             file.write(str(row))
             file.write('\n')
 
+if __name__ == '__main__':
+    process = CrawlerProcess({
+        'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)'
+    })
 
-process = CrawlerProcess({
-    'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)'
-})
-
-process.crawl(MySpider)
-process.start()
+    process.crawl(MySpider)
+    process.start()
