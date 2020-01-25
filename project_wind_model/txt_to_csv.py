@@ -87,7 +87,18 @@ def str_to_num(lst):
     return lst
 
 
-def write_csv(lst, name='temp.csv'):
+def dict_to_list(d):
+
+    l = []
+
+    for key, val in d.items():
+        temp = [key] + val
+        l.append(temp)
+
+    return l
+
+
+def write_csv(d, name='temp.csv'):
     """
     Write csv file from nested list
 
@@ -98,13 +109,14 @@ def write_csv(lst, name='temp.csv'):
     with open(name, 'w', newline='') as csv_file:
         writer = csv.writer(csv_file)
 
-        for row in lst:
-            row_with_date = None
+        l = dict_to_list(d)
+
+        for row in l:
             writer.writerow(row)
 
 
 if __name__ == '__main__':
-    loc = ''
+    loc = 'KNMTRUTH6'
 
     filename = 'values_' + loc + '.txt'
     csv_name = 'weather_' + loc + '.csv'
@@ -115,11 +127,15 @@ if __name__ == '__main__':
     print('File read successfully')
 
     l_int = str_to_num(l)
+    d = add_dates_to_list(l_int)
+    print(len(l))
+    print(len(d))
 
     print("Values converted to numbers")
 
-    write_csv(l_int, csv_name)
+    write_csv(d, csv_name)
 
     #farenheit_to_celsius(csv_name)
 
     print("CSV file created")
+
