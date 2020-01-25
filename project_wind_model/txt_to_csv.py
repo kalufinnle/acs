@@ -30,6 +30,22 @@ def read_txt(filename):
     return rows
 
 
+def farenheit_to_celsius(name):
+
+    with open(name, 'r', newline='') as csv_file:
+
+        reader = csv.reader(csv_file)
+
+        for row in reader:
+
+            for i in range(len(row)):
+                if (i-1) % 12 == 0 or (i - 2) % 12 == 0:
+
+                    if row[i] != 'None' and row[i] != '--':
+                        row[i] = round((float(row[i])-32) * 5/9, 2)
+
+
+
 def str_to_num(lst):
     """
     Convert the entries in the list that are numbers to type float (all except entries i=0,4)
@@ -64,7 +80,10 @@ def write_csv(lst, name='temp.csv'):
 
 
 if __name__ == '__main__':
-    filename = 'values.txt'
+    loc = ''
+
+    filename = 'values_'+loc+'.txt'
+    csv_name = 'weather_'+loc+'.csv'
 
     print('-- Initiating process --')
     l = read_txt(filename)
@@ -75,6 +94,8 @@ if __name__ == '__main__':
 
     print("Values converted to numbers")
 
-    write_csv(l_int, 'weather.csv')
+    write_csv(l_int, csv_name)
+
+    farenheit_to_celsius(csv_name)
 
     print("CSV file created")
