@@ -18,7 +18,7 @@ function [m_dot, dn, dT, P] = ox_tank_sim(n, T, V, m_tank, m_dot_prev, ...
 %       "Cd" = injector plate discharge coefficient.
 %       "Pe" = pressure at exit of injector plate (Pa).
 %       "n_pr" = amount of pressurant added to tank (kmol).
-%       "pr_flg" = 0 for helium 1 for nitrogen.
+%       "pr_flg" = 0 for helium, 1 for nitrogen.
 %
 %   OUTPUTS:
 %       "m_dot" = scalar ox mass flow rate (kg/s).
@@ -39,7 +39,7 @@ J2 = 0.384;            % valid for Temp range [182.3 K - 309.57 K]
 J3 = 0;
 J4 = 0;
 
-% heat capacity of N2 at constant pressure [J/(kmol*K)] coefficients
+% specific heat capacity of N2 at constant pressure [J/(kmol*K)] coefficients
 % valid for Temp range [100 K - 1500 K]
 C1 = pr_flg*0.28883e5 + (1-pr_flg)*0.2079e5; 
 C2 = 0;              
@@ -47,12 +47,12 @@ C3 = 0;
 C4 = 0;
 C5 = 0;
 
-D1 = 0.2934e5; % heat capacity of N2O gas at constant pressure [J/(kmol*K)] coefficients
+D1 = 0.2934e5; % specific heat capacity of N2O gas at constant pressure [J/(kmol*K)] coefficients
 D2 = 0.3236e5; % valid for Temp range [100 K - 1500 K]
 D3 = 1.1238e3;
 D4 = 0.2177e5;
 D5 = 479.4;
-E1 = 6.7556e4; % heat capacity of N2O liquid at constant pressure [J/(kmol*K)] coefficients
+E1 = 6.7556e4; % specific heat capacity of N2O liquid at constant pressure [J/(kmol*K)] coefficients
 E2 = 5.4373e1; % valid for Temp range [182.3 K - 200 K]
 E3 = 0;
 E4 = 0;
