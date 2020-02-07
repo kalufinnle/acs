@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Nov 26 14:34:08 2019
+Created on Tue Nov 16 14:34:08 2019
 
-@author: kevin
+Main script for simulating rocket Attitude control cold gas thrusters simulation, originally written by Kevin F. Li
+Revision:  
+Version Date: Saturday, Febuary 30, 2020
 """
 
 import numpy as np

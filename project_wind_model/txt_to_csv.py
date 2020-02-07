@@ -1,5 +1,6 @@
 import csv
 
+
 def read_txt(filename):
     """
     Read file with given filename as txt file and extract rows, strip and clean up, convert and return nested list of
@@ -30,8 +31,31 @@ def read_txt(filename):
     return rows
 
 
-def farenheit_to_celsius(name):
+def add_dates_to_list(input_list):
+    d = {}
 
+    j = 0
+    for year in range(2017, 2020):
+
+        for month in range(1, 13):
+
+            days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+            for day in range(days[month - 1] + 1):
+                date = str(year) + '-' + str(month) + '-' + str(day)
+                d[date] = input_list[j]
+                j += 1
+
+    return d
+
+
+def farenheit_to_celsius(name):
+    """
+    Change farenheit to celsius in the csv file
+
+    :param name:
+    :return:
+    """
     with open(name, 'r', newline='') as csv_file:
 
         reader = csv.reader(csv_file)
@@ -39,11 +63,10 @@ def farenheit_to_celsius(name):
         for row in reader:
 
             for i in range(len(row)):
-                if (i-1) % 12 == 0 or (i - 2) % 12 == 0:
+                if (i - 1) % 12 == 0 or (i - 2) % 12 == 0:
 
                     if row[i] != 'None' and row[i] != '--':
-                        row[i] = round((float(row[i])-32) * 5/9, 2)
-
+                        row[i] = round((float(row[i]) - 32) * 5 / 9, 2)
 
 
 def str_to_num(lst):
@@ -64,7 +87,18 @@ def str_to_num(lst):
     return lst
 
 
-def write_csv(lst, name='temp.csv'):
+def dict_to_list(d):
+
+    l = []
+
+    for key, val in d.items():
+        temp = [key] + val
+        l.append(temp)
+
+    return l
+
+
+def write_csv(d, name='temp.csv'):
     """
     Write csv file from nested list
 
@@ -75,15 +109,17 @@ def write_csv(lst, name='temp.csv'):
     with open(name, 'w', newline='') as csv_file:
         writer = csv.writer(csv_file)
 
-        for row in lst:
+        l = dict_to_list(d)
+
+        for row in l:
             writer.writerow(row)
 
 
 if __name__ == '__main__':
-    loc = ''
+    loc = 'KNMTRUTH6'
 
-    filename = 'values_'+loc+'.txt'
-    csv_name = 'weather_'+loc+'.csv'
+    filename = 'values_' + loc + '.txt'
+    csv_name = 'weather_' + loc + '.csv'
 
     print('-- Initiating process --')
     l = read_txt(filename)
@@ -91,11 +127,15 @@ if __name__ == '__main__':
     print('File read successfully')
 
     l_int = str_to_num(l)
+    d = add_dates_to_list(l_int)
+    print(len(l))
+    print(len(d))
 
     print("Values converted to numbers")
 
-    write_csv(l_int, csv_name)
+    write_csv(d, csv_name)
 
-    farenheit_to_celsius(csv_name)
+    #farenheit_to_celsius(csv_name)
 
     print("CSV file created")
+
