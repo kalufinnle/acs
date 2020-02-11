@@ -8,14 +8,16 @@ Created on Sat Nov 19 19:55:04 2019
 
 1.Thrust calculation for NOZZLES where tank pressure and temperature changes as a result of using propellant 
 2.For tank blow-down model (describing how fast a tank depressurize through a small orifice or nozzel attached to a tank)
-Condition:  <Isentropic nozzle flow>
-            <Absolute pressure is used>
+Assumption: <Isentropic nozzle flow>
+            <Absolute pressure is used (psia)>
             <Mass flow rate calculation is suitable for ideal compressible gas>
             <The gas is calorically perfect for Mach less than 5; therefore ratio of specific heat is constant >
-            
-Assumption: <Upstream pressure decreases as a result of not using regulators>
-            <We do not consider too small nozzles, say with chamber size <10 mm and neck size <1 mm, where the effect of boundary layers become predominant>
+            <Isotheraml during on-ground test>
+            <Not Isotheral during flight, therefore nitrogen density flutuate due to atmospheric temperature change even nitrogen is not being used>
 
+Condition:  <Upstream pressure decreases as a result of not using regulators>
+            <We do not consider too small nozzles, say with chamber size <10 mm and neck size <1 mm, where the effect of boundary layers become predominant>
+            <Citical point of nitrogen is at 126.2K/-147.0C/-232.5F && 3.40Mpa/34.0bara/493psia>
 Note:  At subsonic and low supersonic Mach numbers (M<5), air is calorically perfect. But under low hypersonic conditions (M>=5), air is calorically imperfect. 
 The specific heat capacity changes with the temperature of the flow because of excitation of the vibrational modes of the diatomic nitrogen and oxygen of the atmosphere. 
 For simulation illustrating molecular vibration under calorically imperfect condition, use function "calorically_imperf"
